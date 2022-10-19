@@ -1,0 +1,14 @@
+*{background-color: rgb(200, 50,50);}
+.head1{
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid black;
+}
+.recpics{
+    height: 200px; 
+    width: 200px;
+}
+.ing1{
+    border: 2px solid black; 
+    text-align: center;
+}
