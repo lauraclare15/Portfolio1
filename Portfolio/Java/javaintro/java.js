@@ -22,3 +22,23 @@ function pickMeal() {
     }
 }
 
+const txt1 = document.querySelector('input');
+const q1a = document.querySelector(".question1a");
+
+txt1.addEventListener('change', rpsChoose1);
+
+function rpsChoose1() {
+    const choice1 = txt1.value;
+
+    if (choice1.toLowerCase() == 'rock') {
+        q1a.textContent = 'You have chosen ROCK';
+    } else if (choice1.toLowerCase() == 'paper') {
+        q1a.textContent = 'You have chosen PAPER'
+    } else if (choice1.toLowerCase() == 'scissors') {
+        q1a.textContent = 'You have chosen SCISSORS'
+    } else {
+        q1a.textContent = 'Rock, Paper, or Scissors?'
+    }
+};
+
+

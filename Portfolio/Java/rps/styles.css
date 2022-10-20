@@ -1,0 +1,39 @@
+*{
+  overflow: hidden;
+}
+.rpsqa{
+    border: 2px solid black;
+    margin: 1% 50% 1% 1%;
+    padding: 1%;
+}
+.rock2{
+    background-color: gray;
+}
+.paper2{
+    background-color: antiquewhite;
+
+}
+.scissors2{
+    background-color: aquamarine;
+}
+
+.question1{
+    border: 2px solid black;
+    position: relative;
+    padding-top: 1%;
+    margin-right: 50%;
+    display: flex; 
+    justify-content: center;
+}
+
+.compChooseDiv1{
+    border: 2px solid black;
+    margin: 1% 50% 1% 1%;
+    padding: 1%;  
+}
+.compChooseDiv2{
+    border: 2px solid black;
+    margin: 1% 50% 1% 1%;
+    padding: 1%;  
+}
+

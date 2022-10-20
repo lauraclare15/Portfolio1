@@ -6,20 +6,15 @@
   <title>Rock Paper Scissors</title>
 </head>
 <body>
-    
-    <div class="txtbx1">
-      <h1> Rock, Paper, or Scissors</h1>
-        <input type="text" class="txtbx1"/>
-        <button type="submit">Choose</button>
-         <p class="question1a"></p>
-    </div>
-
-    <div class="rpsbttn">
-      <h1> Rock, Paper, or Scissors?</h1>
-        <button class="rock2" onclick="rpsChoose2('rock')">Rock</button>
-        <button class="paper2" onclick="rpsChoose2('paper')">Paper</button>
-        <button class="scissors2" onclick="rpsChoose2('scissors')">Scissors</button>
-        <p class="question1b"></p>
+    <div>
+      <h1> Rock, Paper, Scissors</h1>
+      <p> Click a button to choose </p>
+      <button class="bttn1" onclick="playerChooses('rock')">Rock</button>
+      <button class="bttn1" onclick="playerChooses('paper')">Paper</button>
+      <button class="bttn1" onclick="playerChooses('scissors')">Scissors</button>
+      <p class="playerChoice"> You have chosen NOTHING </p> 
+      <button class="readybttn" onclick="compChooses('cchoice')">Ready?</button>
+      <p class="compChoice">The Computer has chosen...</p>
     </div>
   <script src="script.js">
   </script>

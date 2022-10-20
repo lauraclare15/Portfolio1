@@ -1,33 +1,32 @@
-const txt1 = document.querySelector('input');
-const q1a = document.querySelector(".question1a");
+const playerChoice = document.querySelector('.playerChoice');
+const btn1 = document.querySelector('.bttn1');
 
-txt1.addEventListener('change', rpsChoose1);
+btn1.addEventListener('click', playerChooses());
 
-function rpsChoose1() {
-    const choice1 = txt1.value;
+function playerChooses(pchoice) {
+    
+    if (pchoice === 'rock') {
+        playerChoice.textContent = 'You have chosen ROCK';
+    } else if (pchoice === 'paper') {
+        playerChoice.textContent = 'You have chosen PAPER';
+    } else if (pchoice === 'scissors') {
+        playerChoice.textContent = 'You have chosen SCISSORS';
+    }
+}
 
-    if (choice1 == 'rock') {
-        q1a.textContent = 'You have chosen ROCK';
-    } else if (choice1 == 'paper') {
-        q1a.textContent = 'You have chosen PAPER'
-    } else if (choice1 == 'scissors') {
-        q1a.textContent = 'You have chosen SCISSORS'
-    } else {
-        q1a.textContent = 'Rock, Paper, or Scissors?'
+const compChoice = document.querySelector('.compChoice');
+const btn2 = document.querySelector('.readybttn');
+
+btn2.addEventListener('click', compChooses());
+
+function compChooses() {
+    let cchoice = Math.floor(Math.random() * 3);
+    
+    if (cchoice === 0) {
+        compChoice.textContent = 'The Computer has chosen ROCK';
+    } else if (cchoice === 1) {
+        compChoice.textContent = 'The Computer has chosen PAPER';
+    } else if (cchoice === 2) {
+        compChoice.textContent = 'The Computer has chosen SCISSORS';
     }
 };
-
-const q1b = document.querySelector('.question1b');
-const btn2 = document.querySelector("button");
-
-btn2.addEventListener('click', rpsChoose2(choice2));
-
-function rpsChoose2(choice2) {
-    q1b.textContent = choice2;
-    
-    if (choice2 === 'rock') {
-        q1b.textContent = 'You have chosen ROCK'
-    } else if (choice2 === 'paper') {
-        q1b.textContent = 'You have chosen PAPER'
-    } else if (choice2 === 'scissors') {
-        q1b.textContent = 'You have chosen SCISSORS'}};
