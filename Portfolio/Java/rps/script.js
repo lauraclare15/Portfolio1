@@ -1,30 +1,33 @@
 const txt1 = document.querySelector('input');
-const para = document.querySelector('p');
-const bttn = document.querySelector();
+const q1a = document.querySelector(".question1a");
 
-txt1.addEventListener('change', rpsChoose);
+txt1.addEventListener('change', rpsChoose1);
 
-function rpsChoose() {
-    const choice = txt1.value;
-
-    if (choice == 'rock') {
-        para.textContent = 'Rock';
-    } else if (choice == 'paper') {
-        para.textContent = 'Paper'
-    } else if (choice == 'scissors') {
-        para.textContent = 'Scissors'
-    } else {
-        para.textContent = 'Rock, Paper, or Scissors?'
-    }
-}
 function rpsChoose1() {
-    const choice1 = bttn.value;
+    const choice1 = txt1.value;
 
     if (choice1 == 'rock') {
-        para.textContent = 'Rock';
+        q1a.textContent = 'You have chosen ROCK';
     } else if (choice1 == 'paper') {
-        para.textContent = 'Paper'
+        q1a.textContent = 'You have chosen PAPER'
     } else if (choice1 == 'scissors') {
-        para.textContent = 'Scissors'
+        q1a.textContent = 'You have chosen SCISSORS'
+    } else {
+        q1a.textContent = 'Rock, Paper, or Scissors?'
     }
-}
+};
+
+const q1b = document.querySelector('.question1b');
+const btn2 = document.querySelector("button");
+
+btn2.addEventListener('click', rpsChoose2(choice2));
+
+function rpsChoose2(choice2) {
+    q1b.textContent = choice2;
+    
+    if (choice2 === 'rock') {
+        q1b.textContent = 'You have chosen ROCK'
+    } else if (choice2 === 'paper') {
+        q1b.textContent = 'You have chosen PAPER'
+    } else if (choice2 === 'scissors') {
+        q1b.textContent = 'You have chosen SCISSORS'}};

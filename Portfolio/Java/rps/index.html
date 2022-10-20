@@ -6,18 +6,20 @@
   <title>Rock Paper Scissors</title>
 </head>
 <body>
-    <h1> Rock Paper Scissors</h1>
+    
     <div class="txtbx1">
+      <h1> Rock, Paper, or Scissors</h1>
         <input type="text" class="txtbx1"/>
         <button type="submit">Choose</button>
-         <p></p>
+         <p class="question1a"></p>
     </div>
-    <div class="spacer"></div>
-    <div class="bttn1">
-        <button id="rps2" type="menu">Rock</button>
-        <button id="rps2" type="menu">Paper</button>
-        <button id="rps2" type="menu">Scissors</button>
-        <p></p>
+
+    <div class="rpsbttn">
+      <h1> Rock, Paper, or Scissors?</h1>
+        <button class="rock2" onclick="rpsChoose2('rock')">Rock</button>
+        <button class="paper2" onclick="rpsChoose2('paper')">Paper</button>
+        <button class="scissors2" onclick="rpsChoose2('scissors')">Scissors</button>
+        <p class="question1b"></p>
     </div>
   <script src="script.js">
   </script>
