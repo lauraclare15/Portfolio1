@@ -1,0 +1,24 @@
+.txtbx1{
+    border: 2px solid black;
+    background-color: beige;
+    margin: 5%;
+    padding: 5%;
+}
+.bttn1{
+    border: 2px solid black;
+    margin: 5%; 
+    padding: 5%;
+
+}
+.spacer{
+    border: 2px solid black;
+    margin: 5%; 
+    padding: 5%;
+    background-color: black;
+}
+h1{
+    background-color: beige;
+    margin: 5%;
+    padding: 5%;
+
+}
