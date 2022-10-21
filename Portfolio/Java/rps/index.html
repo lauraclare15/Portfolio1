@@ -7,14 +7,30 @@
 </head>
 <body>
     <div>
-      <h1> Rock, Paper, Scissors</h1>
-      <p> Click a button to choose </p>
-      <button class="bttn1" onclick="playerChooses('rock')">Rock</button>
-      <button class="bttn1" onclick="playerChooses('paper')">Paper</button>
-      <button class="bttn1" onclick="playerChooses('scissors')">Scissors</button>
-      <p class="playerChoice"> You have chosen ... </p> 
-      <p class="compChoice">The Computer has chosen...</p>
-      <p class="result">And the Winner Is: </p>
+      <div class="title">
+        <h1> Rock, Paper, Scissors</h1>
+      </div>
+      <div class="scoreBoard">
+        <p class="computerScore"> Computer: 0 </p>
+        <p class="playerScore"> Player: 0</p>
+      </div>
+      <div class="chooseBox">
+        <p> Click a button to choose </p>
+        <button class="bttn1" onclick="playerChooses('rock')">Rock</button>
+        <button class="bttn1" onclick="playerChooses('paper')">Paper</button>
+        <button class="bttn1" onclick="playerChooses('scissors')">Scissors</button>
+      </div>
+      <div class="choices">
+        <p class="playerChoice"> You have chosen ... </p> 
+        <p class="compChoice">The Computer has chosen...</p>
+      </div>
+      <div class="winner">
+        <p class="roundWinner"> Round Winner:  </p>
+        <p class="gameWinner"> </p>
+       </div>
+       <div class="reset">
+        <button class="resetButton" onclick="resetGame()">Reset Game</button>
+       </div>
     </div>
   <script src="script.js">
   </script>

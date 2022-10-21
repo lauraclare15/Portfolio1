@@ -1,9 +1,16 @@
+const computerScorePara = document.querySelector('.computerScore');
+const playerScorePara = document.querySelector('.playerScore');
 const playerChoice = document.querySelector('.playerChoice');
 const compChoice = document.querySelector('.compChoice');
-const resultIs = document.querySelector('.result');
-
+const roundWinner = document.querySelector('.roundWinner');
 const pchoice = document.querySelector('.bttn1');
+const gameWinner = document.querySelector('.gameWinner');
+const resetGame1 = document.querySelector('.resetButton');
 
+let playerScore = 0;
+let computerScore = 0;
+
+resetGame1.addEventListener('click', resetGame);
 
 function playerChooses(pchoice) {
     
@@ -11,16 +18,22 @@ function playerChooses(pchoice) {
         playerChoice.textContent = 'You have chosen ROCK';
         compChooses();
         runGame();
+        updateScore();
+        gameOver();
 
     } else if (pchoice === 'paper') {
         playerChoice.textContent = 'You have chosen PAPER';
         compChooses();
         runGame();
+        updateScore();
+        gameOver();
 
     } else if (pchoice === 'scissors') {
         playerChoice.textContent = 'You have chosen SCISSORS';
         compChooses();
         runGame();
+        updateScore();
+        gameOver();
     }
 }
 
@@ -41,18 +54,46 @@ function runGame() {
         (compChoice.textContent === 'The Computer has chosen PAPER' && playerChoice.textContent === 'You have chosen PAPER')||
         (compChoice.textContent === 'The Computer has chosen SCISSORS' && playerChoice.textContent === 'You have chosen SCISSORS')
         ){
-        resultIs.textContent = 'It\'s a Tie'
+        roundWinner.textContent = 'Round Winner: No one, It\'s a Tie'
     } else if (
         (compChoice.textContent === 'The Computer has chosen ROCK' && playerChoice.textContent === 'You have chosen SCISSORS')|| 
         (compChoice.textContent === 'The Computer has chosen PAPER' && playerChoice.textContent === 'You have chosen ROCK')||
         (compChoice.textContent === 'The Computer has chosen SCISSORS' && playerChoice.textContent === 'You have chosen PAPER')
         ){
-        resultIs.textContent = 'Computer Wins'
+        roundWinner.textContent = 'Round Winner: Computer';
+        computerScore++;
+    
     } else if (
         (compChoice.textContent === 'The Computer has chosen ROCK' && playerChoice.textContent === 'You have chosen PAPER')|| 
         (compChoice.textContent === 'The Computer has chosen PAPER' && playerChoice.textContent === 'You have chosen SCISSORS')|| 
         (compChoice.textContent === 'The Computer has chosen SCISSORS' && playerChoice.textContent === 'You have chosen ROCK')
         ){
-        resultIs.textContent = 'Player Wins'
+        roundWinner.textContent = 'Round Winner: Player';
+        playerScore++;
+     
     }
+}
+
+function updateScore() {
+    playerScorePara.textContent = `Player: ${playerScore}`
+    computerScorePara.textContent = `Computer: ${computerScore}`
+}
+
+
+function gameOver() {
+    if (playerScore === 5) {
+        gameWinner.textContent = 'You Win!'
+    } else if (computerScore === 5) {
+        gameWinner.textContent = 'Computer Wins.'
+    }
+}
+
+function resetGame() {
+    playerScore = 0;
+    computerScore = 0;
+    playerScorePara.textContent = 'Player: 0';
+    computerScorePara.textContent = 'Computer: 0';
+    compChoice.textContent = 'The Computer has chosen...';
+    playerChoice.textContent = 'You have chosen...'
+    roundWinner.textContent = 'Round Winner: '
 }
