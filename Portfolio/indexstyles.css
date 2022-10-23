@@ -1,11 +1,11 @@
-*{overflow: hidden; 
-    background-color: bisque;
-  }
+*{
+    background-color: lightblue;
+}
+
 .head1{
-    border: 2px solid black;
     margin-left: 25%; 
     margin-right: 25%;
-    background-color: antiquewhite;
+
 
 }
 .recmain{
@@ -34,24 +34,18 @@
 
 }
 .intro1{
-    border: 2px solid black; 
     margin: 5% 10%; 
 }
 .navbar1{
-    border: 2px solid black;
-    background-color: antiquewhite;
 }
 .intro2{
     border: 2px solid black; 
     margin: 5%;
     padding: 5%;
-    background-color: antiquewhite;
 }
 .head2{
     margin: 1%;
     padding: 1%; 
-    border: 2px solid black;
     display: flex;
     justify-content: right;
-    background-color: antiquewhite;
 }
