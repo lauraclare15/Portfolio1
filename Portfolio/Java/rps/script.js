@@ -6,6 +6,8 @@ const roundWinner = document.querySelector('.roundWinner');
 const pchoice = document.querySelector('.bttn1');
 const gameWinner = document.querySelector('.gameWinner');
 const resetGame1 = document.querySelector('.resetButton');
+const endGameBttn = document.querySelector('.openEndGame');
+const endGameModal = document.querySelector('.endGameModal');
 
 let playerScore = 0;
 let computerScore = 0;
@@ -82,9 +84,12 @@ function updateScore() {
 
 function gameOver() {
     if (playerScore === 5) {
-        gameWinner.textContent = 'You Win!'
+        openEndGameModal();
+        gameWinner.textContent = 'You Win!';
     } else if (computerScore === 5) {
-        gameWinner.textContent = 'Computer Wins.'
+        openEndGameModal();
+        gameWinner.textContent = 'Computer Wins.';
+        
     }
 }
 
@@ -94,6 +99,15 @@ function resetGame() {
     playerScorePara.textContent = 'Player: 0';
     computerScorePara.textContent = 'Computer: 0';
     compChoice.textContent = 'The Computer has chosen...';
-    playerChoice.textContent = 'You have chosen...'
-    roundWinner.textContent = 'Round Winner: '
+    playerChoice.textContent = 'You have chosen...';
+    roundWinner.textContent = 'Round Winner:';
+    closeEndGameModal();
+}
+
+function openEndGameModal() {
+    endGameModal.style.display = 'block';   
+}
+
+function closeEndGameModal() {
+    endGameModal.style.display = 'none'; 
 }
