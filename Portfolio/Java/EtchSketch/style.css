@@ -1,0 +1,13 @@
+#grid{
+    display: grid; 
+    height: 500px; 
+    width: 500px; 
+    grid-template-columns: 2fr 1fr 1fr
+    gap-
+}
+.cell{
+    display: grid; 
+    height: 50px; 
+    width: 50px;
+
+}
